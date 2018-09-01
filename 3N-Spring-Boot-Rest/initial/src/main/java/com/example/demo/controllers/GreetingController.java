@@ -1,11 +1,10 @@
-package hello;
+package com.example.demo.controllers;
 
 import java.util.concurrent.atomic.AtomicLong;
+
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
-
-import bye.Bye;
 
 /* This code uses Spring 4’s new @RestController annotation, 
  * which marks the class as a controller where every method returns a domain object instead of a view. 
@@ -15,16 +14,15 @@ import bye.Bye;
 public class GreetingController {
 
     private static final String TEMPLATE_HELLO = "Hello, %s!";
-    private static final String TEMPLATE_BYE = "Bye, %s!";
     private final AtomicLong counter = new AtomicLong();
 
+    /**
+     * Spring escanea los RequestMapping que encuentre y los convierte en rutas para el controlador.
+     * @param name
+     * @return
+     */
     @RequestMapping("/greeting")
     public Greeting greeting(@RequestParam(value="name", defaultValue="World") String name) {
         return new Greeting(counter.incrementAndGet(), String.format(TEMPLATE_HELLO, name));
-    }
-    
-    @RequestMapping("/bye")
-    public Bye bye(@RequestParam(value="name", defaultValue="World") String name) {
-        return new Bye(counter.incrementAndGet(), String.format(TEMPLATE_BYE, name));
     }
 }

@@ -1,10 +1,10 @@
 Manifest-Version: 1.0
-Implementation-Title: gs-rest-service
+Implementation-Title: 3n-spring-boot-rest
 Implementation-Version: 0.1.0
-Built-By: ingg
+Built-By: chetex
 Implementation-Vendor-Id: org.springframework
-Build-Jdk: 1.8.0_171
+Build-Jdk: 1.8.0_181
 Implementation-URL: https://projects.spring.io/spring-boot/#/spring-bo
- ot-starter-parent/gs-rest-service
+ ot-starter-parent/3n-spring-boot-rest
 Created-By: Maven Integration for Eclipse
 
