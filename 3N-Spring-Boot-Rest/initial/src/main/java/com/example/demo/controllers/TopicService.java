@@ -36,4 +36,20 @@ public class TopicService {
 	public void addTopic(Topic topic) {
 		listTopic.add(topic);
 	}
+
+	/**
+	 * Iterate over all topics, and search for id topic. 
+	 * Then update current topic object
+	 * 
+	 * @param id
+	 * @param topic
+	 */
+	public void updateTopic(int id, Topic topic) {
+		for (int i=0; i < listTopic.size(); i++) {
+			Topic t = listTopic.get(i);
+			if (t.getId() == id) {
+				listTopic.set(i, topic);
+			}
+		}
+	}
 }
