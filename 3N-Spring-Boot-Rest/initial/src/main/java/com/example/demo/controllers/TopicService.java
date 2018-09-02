@@ -7,7 +7,7 @@ import java.util.List;
 import org.springframework.stereotype.Service;
 
 @Service
-public class TopicService {
+public class TopicService implements TopicInterface {
 
 	/**
 	 * Create mock topic list
