@@ -52,4 +52,14 @@ public class TopicService implements TopicInterface {
 			}
 		}
 	}
+
+	/**
+	 * Delete topic
+	 * 
+	 * @param id
+	 * @param topic
+	 */
+	public void deleteTopic(int id, Topic topic) {
+		listTopic.removeIf(response -> response.getId() == id);
+	}
 }

@@ -27,11 +27,6 @@ public class TopicController {
 		return topicService.getTopic(id);
 	}
 	
-	/**
-	 * Two ways of calling post or put. this method or down one.
-	 * 
-	 * @param topic
-	 */
 	@PostMapping("/topics")
 	public void addTopic(@RequestBody Topic topic) {
 		topicService.addTopic(topic);
@@ -40,5 +35,10 @@ public class TopicController {
 	@RequestMapping(method=RequestMethod.PUT, value="/topics/{id}")
 	public void updateTopic(@RequestBody Topic topic, @PathVariable int id) {
 		topicService.updateTopic(id, topic);
+	}
+	
+	@RequestMapping(method=RequestMethod.DELETE, value="/topics/{id}")
+	public void deleteTopic(@RequestBody Topic topic, @PathVariable int id) {
+		topicService.deleteTopic(id, topic);
 	}
 }
