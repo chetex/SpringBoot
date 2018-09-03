@@ -39,7 +39,7 @@ public class TopicService implements TopicInterface {
 
 	/**
 	 * Iterate over all topics, and search for id topic. 
-	 * Then update current topic object
+	 * Then update current topic object 2
 	 * 
 	 * @param id
 	 * @param topic
