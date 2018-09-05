@@ -18,6 +18,10 @@ public class Topic {
 		this.description = description;
 	}
 	
+	public Topic() {
+		super();
+	}
+
 	public int getId() {
 		return id;
 	}
