@@ -2,7 +2,7 @@ package com.examplejpa.objects;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
-import javax.persistence.OneToMany;
+import javax.persistence.ManyToOne;
 
 @Entity
 public class CarReviews {
@@ -10,7 +10,7 @@ public class CarReviews {
 	@Id
 	private int id;
 	
-	@OneToMany
+	@ManyToOne
 	private CarReview carReview;
 
 	/**

@@ -1,12 +1,12 @@
 package com.examplejpa.objects;
 
-import javax.persistence.OneToMany;
+import javax.persistence.ManyToOne;
 
 public class Dashboard {
 
-	@OneToMany
+	@ManyToOne
 	private CarReviews carReviews;
 	
-	@OneToMany
+	@ManyToOne
 	private CarBreakDowns carBreackDowns;
 }

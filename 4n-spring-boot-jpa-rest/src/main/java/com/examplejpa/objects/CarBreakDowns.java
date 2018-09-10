@@ -2,7 +2,7 @@ package com.examplejpa.objects;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
-import javax.persistence.OneToMany;
+import javax.persistence.ManyToOne;
 
 @Entity
 public class CarBreakDowns {
@@ -10,8 +10,8 @@ public class CarBreakDowns {
 	@Id
 	private int id;
 	
-	@OneToMany
-	private CarBreakDowns carBreakDowns;
+	@ManyToOne
+	private CarBreakDown carBreakDown;
 	
 	/**
 	 * @return the id
