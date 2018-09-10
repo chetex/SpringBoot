@@ -1,27 +1,31 @@
 package com.examplejpa.objects;
 
-import java.util.List;
-
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 
 @Entity
 public class CarReviews {
 
 	@Id
 	private int id;
-	private List<CarReview> carReviewList;
 	
+	@OneToMany
+	private CarReview carReview;
+
 	/**
-	 * @return the carReviewList
+	 * @return the id
 	 */
-	public List<CarReview> getCarReviewList() {
-		return carReviewList;
+	public int getId() {
+		return id;
 	}
+
 	/**
-	 * @param carReviewList the carReviewList to set
+	 * @param id the id to set
 	 */
-	public void setCarReviewList(List<CarReview> carReviewList) {
-		this.carReviewList = carReviewList;
+	public void setId(int id) {
+		this.id = id;
 	}
+	
+	
 }
