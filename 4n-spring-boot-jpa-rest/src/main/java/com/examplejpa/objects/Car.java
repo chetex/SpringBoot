@@ -3,18 +3,30 @@ package com.examplejpa.objects;
 import java.util.Date;
 
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 @Entity
 public class Car {
 	
-	@Id
+	@Id 
+	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private int id;
 	private String name;
 	private Date buyDate;
 	private String engine;
 	private String color;
 	
+	public Car() {}
+	
+	public Car(String name, Date buyDate, String engine, String color) {
+		super();
+		this.name = name;
+		this.buyDate = buyDate;
+		this.engine = engine;
+		this.color = color;
+	}
 	/**
 	 * @return the id
 	 */
