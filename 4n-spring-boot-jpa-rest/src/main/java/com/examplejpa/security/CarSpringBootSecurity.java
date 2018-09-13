@@ -13,8 +13,7 @@ public class CarSpringBootSecurity extends WebSecurityConfigurerAdapter {
 	@Override
 	protected void configure(AuthenticationManagerBuilder auth) throws Exception {
 		auth.inMemoryAuthentication()
-			.withUser("ajay").password("{noop}test").roles("USER").and()
-			.withUser("demo").password("{noop}test2").roles("ADMIN");
+			.withUser("admin").password("{noop}test").roles("USER");
 	}
 	
 	@Override
