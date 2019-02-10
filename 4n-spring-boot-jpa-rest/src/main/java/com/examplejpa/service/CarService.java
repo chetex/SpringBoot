@@ -16,7 +16,7 @@ public class CarService {
 	public CarRepository carRepository;
 
 	/**
-	 * CRUD -> Get all cars from database
+	 * CRUD -> Get all cars from database using crud repository
 	 * @return
 	 */
 	public List<Car> getAllCars(){
