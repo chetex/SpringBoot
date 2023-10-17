@@ -28,6 +28,7 @@ public class StudentManagementSystemApplication implements CommandLineRunner {
 	@Override
 	public void run(String... args) throws Exception {
 
+		/*
 		// Fill students repository
 		Student student1 = new Student("Pepe", "Garcia", "test1@gmail.com");
 		studentRepository.save(student1);
@@ -37,5 +38,6 @@ public class StudentManagementSystemApplication implements CommandLineRunner {
 
 		Student student13 = new Student("Pepe4", "Garcia3", "test13@gmail.com");
 		studentRepository.save(student13);
+		*/
 	}
 }

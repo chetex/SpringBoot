@@ -26,4 +26,17 @@ public class StudentServiceImpl implements StudentService {
     public List<Student> getAllStudents() {
         return studentRepository.findAll();
     }
+
+    /**
+     * saveStudent
+     *
+     * Save student from student hmtl form
+     *
+     * @param student 
+     * @return Student
+     */
+    @Override
+    public Student saveStudent(Student student) {
+        return studentRepository.save(student);
+    }
 }
