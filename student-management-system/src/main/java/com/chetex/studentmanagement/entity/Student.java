@@ -24,6 +24,9 @@ public class Student {
     @Column(name = "email")
     private String email;
 
+    // Default constructor
+    public Student () {}
+
     /**
      * Using constructor using fields.
      *
